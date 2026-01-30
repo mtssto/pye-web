@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PYE Matafuegos | Ventas y recargas</title>
+  <meta name="description" content="PYE Matafuegos: venta, recarga y mantenimiento. Atención rápida. Consultas por WhatsApp." />
+  <meta name="theme-color" content="#d90000" />
+
+  <!-- Open Graph (para que se vea lindo al compartir) -->
+  <meta property="og:title" content="PYE Matafuegos" />
+  <meta property="og:description" content="Ventas y recargas de matafuegos. Consultas por WhatsApp." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="dot"></span>
+        <span>Ventas y recargas</span>
+      </div>
+      <div class="topbar__right">
+        <a class="topbar__link" href="#catalogo">Catálogo</a>
+        <a class="topbar__link" href="#servicios">Servicios</a>
+        <a class="topbar__link" href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="brand">
+        <div class="brand__badge" aria-label="PYE Matafuegos">
+          <div class="brand__line1">PYE</div>
+          <div class="brand__line2">MATAFUEGOS</div>
+        </div>
+        <div class="brand__tag">
+          <div class="brand__tagTitle">Protección contra incendios</div>
+          <div class="brand__tagSub">Venta • Recarga • Mantenimiento</div>
+        </div>
+      </div>
+
+      <div class="contactPill">
+        <div class="contactPill__label">WhatsApp / Llamadas</div>
+        <a id="phoneLink" class="contactPill__phone" href="tel:+543465481345">3465 481345</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <h1>Matafuegos para hogar, comercio e industria</h1>
+          <p class="lead">
+            Te asesoramos según normativa y necesidad. Stock y entrega rápida.
+            Recargas y mantenimiento con recordatorio de vencimientos.
+          </p>
+
+          <div class="hero__ctaRow">
+            <a class="btn btn--primary" id="waCta" href="#" target="_blank" rel="noopener">
+              Pedir cotización por WhatsApp
+            </a>
+            <a class="btn btn--ghost" href="#catalogo">Ver catálogo</a>
+          </div>
+
+          <div class="hero__highlights">
+            <div class="chip">🔥 ABC • CO₂ • Agua • Clase K</div>
+            <div class="chip">🧯 Soportes y señalética</div>
+            <div class="chip">✅ Recarga + prueba hidráulica</div>
+          </div>
+        </div>
+
+        <div class="hero__media" aria-label="Imagen de productos">
+          <!-- Reemplazá por tu foto real en /assets/matafuegos.jpg -->
+          <img src="assets/matafuegos.jpg" alt="Matafuegos de distintos tamaños" />
+          <div class="hero__stamp">
+            <div class="hero__stampTitle">Atención directa</div>
+            <div class="hero__stampPhone" id="stampPhone">3465 481345</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalogo -->
+    <section id="catalogo" class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2>Catálogo</h2>
+          <p>Precios orientativos. Armamos combos para tu local / casa.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="card__top">
+              <div class="pill">Más pedido</div>
+              <h3>ABC 1 kg</h3>
+            </div>
+            <ul class="card__list">
+              <li>Ideal hogar / auto</li>
+              <li>Incluye soporte (opcional)</li>
+              <li>Vencimiento según norma</li>
+            </ul>
+            <div class="card__bottom">
+              <div class="price">$ Consultar</div>
+              <button class="btn btn--small" data-product="Matafuego ABC 1 kg">Consultar</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__top">
+              <div class="pill pill--dark">Comercio</div>
+              <h3>ABC 5 kg</h3>
+            </div>
+            <ul class="card__list">
+              <li>Muy usado en locales</li>
+              <li>Buena cobertura</li>
+              <li>Señalética disponible</li>
+            </ul>
+            <div class="card__bottom">
+              <div class="price">$ Consultar</div>
+              <button class="btn btn--small" data-product="Matafuego ABC 5 kg">Consultar</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__top">
+              <div class="pill">Industria</div>
+              <h3>ABC 10 kg</h3>
+            </div>
+            <ul class="card__list">
+              <li>Depósitos / talleres</li>
+              <li>Mayor alcance</li>
+              <li>Soporte reforzado</li>
+            </ul>
+            <div class="card__bottom">
+              <div class="price">$ Consultar</div>
+              <button class="btn btn--small" data-product="Matafuego ABC 10 kg">Consultar</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__top">
+              <div class="pill pill--dark">Especial</div>
+              <h3>CO₂ 5 kg</h3>
+            </div>
+            <ul class="card__list">
+              <li>Tableros eléctricos</li>
+              <li>No deja residuo</li>
+              <li>Recomendado para oficinas</li>
+            </ul>
+            <div class="card__bottom">
+              <div class="price">$ Consultar</div>
+              <button class="btn btn--small" data-product="Matafuego CO2 5 kg">Consultar</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="section section--alt">
+      <div class="container">
+        <div class="section__header">
+          <h2>Servicios</h2>
+          <p>Todo lo que necesitás para estar al día.</p>
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <div class="feature__icon">🧯</div>
+            <div class="feature__title">Recarga y mantenimiento</div>
+            <div class="feature__text">Control, recarga, sellado y etiqueta.</div>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">🔧</div>
+            <div class="feature__title">Prueba hidráulica</div>
+            <div class="feature__text">Según necesidad y tipo de equipo.</div>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">📌</div>
+            <div class="feature__title">Señalética y soportes</div>
+            <div class="feature__text">Cartelería, gabinete, soporte vehicular.</div>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">📅</div>
+            <div class="feature__title">Recordatorio de vencimientos</div>
+            <div class="feature__text">Para que no se te pase la fecha.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2>Contacto</h2>
+          <p>Escribinos por WhatsApp y te respondemos rápido.</p>
+        </div>
+
+        <div class="contactGrid">
+          <div class="contactCard">
+            <h3>WhatsApp</h3>
+            <p>Consultas, stock, precios, recargas y coordinación.</p>
+            <a class="btn btn--primary" id="waContact" href="#" target="_blank" rel="noopener">
+              Abrir WhatsApp
+            </a>
+          </div>
+
+          <form class="form" onsubmit="return false;">
+            <h3>Mensaje rápido</h3>
+            <label>
+              Nombre
+              <input id="name" type="text" placeholder="Tu nombre" />
+            </label>
+            <label>
+              Consulta
+              <textarea id="msg" rows="4" placeholder="Ej: necesito 2 matafuegos ABC 5kg y señalética"></textarea>
+            </label>
+            <button class="btn" id="sendMsg">Enviar por WhatsApp</button>
+            <p class="small">
+              Al enviar, se abre WhatsApp con el mensaje armado.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <div class="footer__brand">PYE MATAFUEGOS</div>
+        <div class="footer__sub">Ventas y recargas</div>
+      </div>
+      <div class="footer__note">© <span id="year"></span> • Hecho simple, rápido y directo.</div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a id="waFloat" class="waFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <span class="waFloat__icon">💬</span>
+    <span class="waFloat__text">WhatsApp</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
