@@ -20,6 +20,7 @@ img{ max-width:100%; display:block; }
   margin:0 auto;
 }
 
+/* ===================== Topbar ===================== */
 .topbar{
   background:var(--black);
   color:var(--white);
@@ -46,6 +47,7 @@ img{ max-width:100%; display:block; }
 .topbar__link{ opacity:.92; }
 .topbar__link:hover{ opacity:1; text-decoration:underline; }
 
+/* ===================== Header ===================== */
 .header{
   border-bottom:1px solid #ececf0;
   background:linear-gradient(180deg, #fff, #fff 60%, #fafafd);
@@ -63,6 +65,18 @@ img{ max-width:100%; display:block; }
   align-items:center;
   gap:16px;
 }
+
+/* Si usás el logo imagen en el header */
+.brand__logoLink { display:inline-flex; align-items:center; }
+.brand__logo{
+  height: 72px;
+  width: auto;
+  display:block;
+  border-radius: 14px;
+  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+}
+
+/* Si todavía usás el badge de texto (podés borrarlo si no lo usás) */
 .brand__badge{
   background:var(--black);
   color:var(--white);
@@ -84,6 +98,7 @@ img{ max-width:100%; display:block; }
   font-size:18px;
   margin-top:6px;
 }
+
 .brand__tagTitle{
   font-weight:800;
   font-size:18px;
@@ -115,6 +130,7 @@ img{ max-width:100%; display:block; }
   color:var(--red2);
 }
 
+/* ===================== Hero ===================== */
 .hero{
   padding:34px 0 18px;
 }
@@ -191,35 +207,67 @@ h1{
   color:#22222a;
 }
 
+/* HERO MEDIA (MEJORADO) */
 .hero__media{
-  position:relative;
-  background: radial-gradient(1200px 500px at 70% 30%, rgba(217,0,0,.12), transparent 60%),
-              linear-gradient(180deg, #fff, #fafafd);
+  position: relative;      /* overlays */
   border:1px solid #ececf0;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding:14px;
+  overflow:hidden;         /* clave para que todo respete bordes */
+  background: linear-gradient(180deg, #fff, #fafafd);
 }
+
+/* Imagen hero */
 .hero__media img{
-  border-radius: calc(var(--radius) - 8px);
-  object-fit: cover;
   width:100%;
-  height: 380px;
+  height: 347px;
+  object-fit: cover;
+  border-radius: 0;        /* el contenedor ya tiene el radio */
 }
+
+/* Logo overlay arriba-izquierda */
+.hero__logo{
+  position:absolute;
+  left:14px;
+  top:14px;
+  display:inline-flex;
+  align-items:center;
+  padding:10px;
+  border-radius:16px;
+
+  /* PLACA BLANCA para legibilidad (recomendado) */
+  background: rgba(255,255,255,.88);
+  border: 1px solid #ececf0;
+
+  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+  backdrop-filter: blur(6px);
+}
+.hero__logo img{
+  height:64px;
+  width:auto;
+  display:block;
+  border-radius:12px; /* porque el logo tiene fondo */
+}
+
+/* Stamp abajo-derecha
+   Si tu nueva imagen ya trae el número, podés BORRAR el HTML del stamp.
+   Si lo dejás, así queda prolijo y sin competir tanto. */
 .hero__stamp{
   position:absolute;
   right:14px;
   bottom:14px;
-  background: rgba(255,255,255,.92);
+  background: rgba(255,255,255,.80);
   border:1px solid #ececf0;
   border-radius: 16px;
   padding:10px 12px;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
   box-shadow: 0 12px 26px rgba(0,0,0,.10);
+  backdrop-filter: blur(6px);
 }
 .hero__stampTitle{ font-size:12px; color:var(--muted); }
-.hero__stampPhone{ font-size:16px; font-weight:900; color:var(--red2); margin-top:2px; }
+.hero__stampPhone{ font-size:20px; font-weight:900; color:var(--red2); margin-top:2px; }
 
+/* ===================== Sections ===================== */
 .section{
   padding:46px 0;
 }
@@ -238,6 +286,7 @@ h1{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
 }
 
+/* ===================== Grid / Cards ===================== */
 .grid{
   margin-top:22px;
   display:grid;
@@ -301,6 +350,7 @@ h1{
   color:var(--black);
 }
 
+/* ===================== Features ===================== */
 .features{
   margin-top:22px;
   display:grid;
@@ -328,6 +378,7 @@ h1{
   line-height:1.5;
 }
 
+/* ===================== Contact ===================== */
 .contactGrid{
   margin-top:22px;
   display:grid;
@@ -387,6 +438,7 @@ input:focus, textarea:focus{
   font-size:12px;
 }
 
+/* ===================== Footer ===================== */
 .footer{
   background:var(--black);
   color:var(--white);
@@ -412,6 +464,7 @@ input:focus, textarea:focus{
   opacity:.85;
 }
 
+/* ===================== WhatsApp Floating ===================== */
 .waFloat{
   position:fixed;
   right:16px;
@@ -431,9 +484,11 @@ input:focus, textarea:focus{
 .waFloat__icon{ font-size:18px; }
 .waFloat:hover{ filter: brightness(1.02); }
 
+/* ===================== Responsive ===================== */
 @media (max-width: 980px){
   .hero__inner{ grid-template-columns: 1fr; }
   .hero__media img{ height: 320px; }
+  .hero__logo img{ height:56px; }
   .grid{ grid-template-columns: repeat(2, 1fr); }
   .features{ grid-template-columns: repeat(2, 1fr); }
   .contactGrid{ grid-template-columns: 1fr; }
@@ -446,4 +501,6 @@ input:focus, textarea:focus{
   .contactPill{ width:100%; }
   .grid{ grid-template-columns: 1fr; }
   .features{ grid-template-columns: 1fr; }
+
+  .brand__logo{ height:62px; }
 }

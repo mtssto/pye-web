@@ -13,6 +13,9 @@
   <meta property="og:type" content="website" />
 
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180.png">
+
 </head>
 
 <body>
@@ -35,10 +38,10 @@
   <header class="header">
     <div class="container header__inner">
       <div class="brand">
-        <div class="brand__badge" aria-label="PYE Matafuegos">
-          <div class="brand__line1">PYE</div>
-          <div class="brand__line2">MATAFUEGOS</div>
-        </div>
+        <a class="brand__logoLink" href="/">
+          <img class="brand__logo" src="assets/pye-logo-horizontal-red.png" alt="PYE Matafuegos" />
+        </a>
+
         <div class="brand__tag">
           <div class="brand__tagTitle">Protección contra incendios</div>
           <div class="brand__tagSub">Venta • Recarga • Mantenimiento</div>
@@ -78,14 +81,9 @@
         </div>
 
         <div class="hero__media" aria-label="Imagen de productos">
-          <!-- Reemplazá por tu foto real en /assets/matafuegos.jpg -->
-          <img src="assets/matafuegos.jpg" alt="Matafuegos de distintos tamaños" />
-          <div class="hero__stamp">
-            <div class="hero__stampTitle">Atención directa</div>
-            <div class="hero__stampPhone" id="stampPhone">3465 481345</div>
-          </div>
+          <img src="assets/productos.png" alt="Matafuegos de distintos tamaños" />
         </div>
-      </div>
+
     </section>
 
     <!-- Catalogo -->
@@ -241,7 +239,7 @@
         <div class="footer__brand">PYE MATAFUEGOS</div>
         <div class="footer__sub">Ventas y recargas</div>
       </div>
-      <div class="footer__note">© <span id="year"></span> • Hecho simple, rápido y directo.</div>
+      <div class="footer__note">© <span id="year"></span> • Hecho por Matias Salto.</div>
     </div>
   </footer>
 

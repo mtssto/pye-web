@@ -17,6 +17,7 @@ function setLinks() {
   const stampPhone = document.getElementById("stampPhone");
   const year = document.getElementById("year");
   const phoneLink = document.getElementById("phoneLink");
+  const heroLogoLink = document.getElementById("heroLogoLink");
 
   if (waCta) waCta.href = waLink(DEFAULT_MESSAGE);
   if (waContact) waContact.href = waLink(DEFAULT_MESSAGE);
@@ -24,6 +25,7 @@ function setLinks() {
   if (stampPhone) stampPhone.textContent = PHONE_PRETTY;
   if (phoneLink) phoneLink.href = `tel:+${PHONE_E164}`;
   if (year) year.textContent = new Date().getFullYear();
+  if (heroLogoLink) heroLogoLink.href = waLink(DEFAULT_MESSAGE);
 }
 
 function bindProductButtons() {
