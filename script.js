@@ -57,3 +57,25 @@ function bindQuickForm() {
 setLinks();
 bindProductButtons();
 bindQuickForm();
+
+// Scroll Reveal
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('reveal-visible');
+      observer.unobserve(entry.target); // Only animate once
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.card, .feature-item, .hero__content, .hero__image').forEach(el => {
+  el.classList.add('reveal');
+  observer.observe(el);
+});
+
